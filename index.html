@@ -12,28 +12,24 @@
         <form id="fleetForm">
             <label for="frota">Frota:</label>
             <input type="text" id="frota" name="frota" required>
-
             <label for="oficina">Oficina:</label>
             <input type="text" id="oficina" name="oficina" required>
-
             <label for="servico">Serviço:</label>
             <input type="text" id="servico" name="servico" required>
-
             <label for="dataEntrada">Data de Entrada:</label>
             <input type="date" id="dataEntrada" name="dataEntrada" required>
-
             <label for="dataSaida">Data de Saída:</label>
             <input type="date" id="dataSaida" name="dataSaida" required>
-
             <label for="valor">Valor (R$):</label>
             <input type="number" step="0.01" id="valor" name="valor" required>
-
             <label for="observacao">Observação:</label>
             <textarea id="observacao" name="observacao"></textarea>
-
-            <button type="submit">Adicionar à Planilha</button>
+            <div class="button-group">
+                <button type="submit">Adicionar à Planilha</button>
+                <button type="button" id="whatsappButton">Enviar por WhatsApp</button>
+                <button type="button" id="emailButton">Enviar por E-mail</button>
+            </div>
         </form>
-
         <h2>Planilha</h2>
         <table id="fleetTable">
             <thead>
@@ -51,10 +47,8 @@
                 <!-- Dados serão inseridos aqui dinamicamente -->
             </tbody>
         </table>
-
         <button id="printButton">Imprimir Planilha</button>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

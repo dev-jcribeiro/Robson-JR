@@ -1,4 +1,4 @@
-/* styles.css */
+/* Estilo geral */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -12,18 +12,17 @@ body {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2 {
-    text-align: center;
     color: #333;
+    text-align: center;
 }
 
 form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    display: grid;
+    gap: 15px;
     margin-bottom: 20px;
 }
 
@@ -33,39 +32,79 @@ label {
 
 input, textarea, button {
     padding: 10px;
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
 }
 
 button {
     background-color: #007bff;
     color: white;
+    border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+    flex: 1;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
+button#whatsappButton {
+    background-color: #25d366;
+}
+
+button#whatsappButton:hover {
+    background-color: #128c7e;
+}
+
+button#emailButton {
+    background-color: #bb001b;
+}
+
+button#emailButton:hover {
+    background-color: #a00018;
+}
+
+button#printButton {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+
+/* Tabela */
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 8px;
+thead {
+    background-color: #007bff;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
     text-align: left;
+    border: 1px solid #ddd;
 }
 
-table th {
-    background-color: #f2f2f2;
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-#printButton {
-    display: block;
-    margin: 0 auto;
+tbody tr:hover {
+    background-color: #f1f1f1;
 }
