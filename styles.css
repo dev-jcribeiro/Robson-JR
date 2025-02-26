@@ -1,29 +1,28 @@
-/* Estilo geral */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    background: #fff;
+    margin: 20px auto;
     padding: 20px;
+    background: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2 {
-    color: #333;
     text-align: center;
+    color: #333;
 }
 
 form {
-    display: grid;
-    gap: 15px;
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 label {
@@ -32,79 +31,43 @@ label {
 
 input, textarea, button {
     padding: 10px;
-    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-textarea {
-    resize: vertical;
-    min-height: 80px;
-}
-
-.button-group {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
 button {
+    cursor: pointer;
     background-color: #007bff;
     color: white;
     border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    flex: 1;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #0056b3;
 }
 
-button#whatsappButton {
-    background-color: #25d366;
-}
-
-button#whatsappButton:hover {
-    background-color: #128c7e;
-}
-
-button#emailButton {
-    background-color: #bb001b;
-}
-
-button#emailButton:hover {
-    background-color: #a00018;
-}
-
-button#printButton {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-}
-
-/* Tabela */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
 }
 
-thead {
-    background-color: #007bff;
-    color: white;
-}
-
 th, td {
-    padding: 10px;
-    text-align: left;
     border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+th {
+    background-color: #f2f2f2;
 }
 
-tbody tr:hover {
-    background-color: #f1f1f1;
+tr.selected {
+    background-color: #cce5ff;
+}
+
+.print-actions {
+    margin-top: 20px;
+    text-align: center;
 }

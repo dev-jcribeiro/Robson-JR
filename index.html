@@ -25,15 +25,16 @@
             <label for="observacao">Observação:</label>
             <textarea id="observacao" name="observacao"></textarea>
             <div class="button-group">
-                <button type="submit">Adicionar à Planilha</button>
-                <button type="button" id="whatsappButton">Enviar por WhatsApp</button>
-                <button type="button" id="emailButton">Enviar por E-mail</button>
+                <button type="submit" aria-label="Adicionar à Planilha">Adicionar à Planilha</button>
+                <button type="button" id="whatsappButton" aria-label="Enviar por WhatsApp">Enviar por WhatsApp</button>
+                <button type="button" id="emailButton" aria-label="Enviar por E-mail">Enviar por E-mail</button>
             </div>
         </form>
         <h2>Planilha</h2>
         <table id="fleetTable">
             <thead>
                 <tr>
+                    <th><input type="checkbox" id="selectAllCheckbox" aria-label="Selecionar todas as linhas"></th>
                     <th>Frota</th>
                     <th>Oficina</th>
                     <th>Serviço</th>
@@ -47,7 +48,10 @@
                 <!-- Dados serão inseridos aqui dinamicamente -->
             </tbody>
         </table>
-        <button id="printButton">Imprimir Planilha</button>
+        <div class="print-actions">
+            <button id="printAllButton" aria-label="Imprimir toda a planilha">Imprimir Tudo</button>
+            <button id="printSelectedButton" aria-label="Imprimir linhas selecionadas">Imprimir Selecionados</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
